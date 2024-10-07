@@ -12,8 +12,8 @@ class TestLogin:
             "email": user['email'],
             "password": user['password']
         }
-        response = requests.post(data.url_login, data=payload)
-        assert response.json()["success"] == data.response_login_success and response.status_code == 200
+        response = requests.post(data.URL_LOGIN, data=payload)
+        assert response.json()["success"] == data.RESPONSE_LOGIN_SUCCESS and response.status_code == 200
 
     @allure.title('Логин с неверными данными')
     @allure.description('Фикстурой создаем пользователя, логинимся под неверными данными. Проверяем сообщение и код ответа')
@@ -22,5 +22,5 @@ class TestLogin:
             "email": "",
             "password": ""
         }
-        response = requests.post(data.url_login, data=payload)
-        assert response.json()["message"] == data.response_login_incorrect and response.status_code == 401
+        response = requests.post(data.URL_LOGIN, data=payload)
+        assert response.json()["message"] == data.RESPONSE_LOGIN_INCORRECT and response.status_code == 401

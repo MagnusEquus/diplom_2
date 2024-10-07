@@ -7,14 +7,14 @@ import helpers
 @allure.step('Создаем юзера, выдаем его креды и токен. После - удаляем')
 @pytest.fixture
 def user():
-    helpers.delete_user(data.email, data.password)
-    helpers.register_user(data.email, data.password, data.name)
+    helpers.delete_user(data.EMAIL, data.PASSWORD)
+    helpers.register_user(data.EMAIL, data.PASSWORD, data.NAME)
     creds = {
-        "email": data.email,
-        "password": data.password,
-        "name": data.name,
-        "token": helpers.get_user_token(data.email, data.password)
+        "email": data.EMAIL,
+        "password": data.PASSWORD,
+        "name": data.NAME,
+        "token": helpers.get_user_token(data.EMAIL, data.PASSWORD)
     }
     yield creds
-    helpers.delete_user(data.email, data.password)
+    helpers.delete_user(data.EMAIL, data.PASSWORD)
 

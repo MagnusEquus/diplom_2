@@ -17,7 +17,7 @@ class TestPatchUser:
             "email": new_email,
             "name": new_name
         }
-        response = requests.patch(data.url_user, headers={'Authorization': token}, data=payload)
+        response = requests.patch(data.URL_USER, headers={'Authorization': token}, data=payload)
         assert response.status_code == 200 and response.json()["user"]["email"] == new_email and response.json()["user"]["name"] == new_name
         helpers.delete_user(new_email, user['password'])
 
@@ -28,6 +28,6 @@ class TestPatchUser:
             "email": user['email'],
             "password": user['password']
         }
-        response = requests.patch(data.url_user, data=payload)
-        assert response.status_code == 401 and response.json()["message"] == data.response_user_not_authorized
+        response = requests.patch(data.URL_USER, data=payload)
+        assert response.status_code == 401 and response.json()["message"] == data.RESPONSE_USER_NOT_AUTHORIZED
 

@@ -1,23 +1,23 @@
 URL = "https://stellarburgers.nomoreparties.site/api/"
-url_register = URL + "auth/register"
-url_user = URL + "auth/user"
-url_login = URL + "auth/login"
-url_order = URL + "orders"
+URL_REGISTER = URL + "auth/register"
+URL_USER = URL + "auth/user"
+URL_LOGIN = URL + "auth/login"
+URL_ORDER = URL + "orders"
 
-response_register_success = True
-response_register_already_exists = "User already exists"
-response_register_need_more = "Email, password and name are required fields"
-response_login_success = True
-response_login_incorrect = "email or password are incorrect"
-response_user_not_authorized = "You should be authorised"
-response_order_no_ingredients = "Ingredient ids must be provided"
-response_order_wrong_ingredients = "One or more ids provided are incorrect"
-response_get_orders_no_auth = "You should be authorised"
+RESPONSE_REGISTER_SUCCESS = True
+RESPONSE_REGISTER_ALREADY_EXISTS = "User already exists"
+RESPONSE_REGISTER_NEED_MORE = "Email, password and name are required fields"
+RESPONSE_LOGIN_SUCCESS = True
+RESPONSE_LOGIN_INCORRECT = "email or password are incorrect"
+RESPONSE_USER_NOT_AUTHORIZED = "You should be authorised"
+RESPONSE_ORDER_NO_INGREDIENTS = "Ingredient ids must be provided"
+RESPONSE_ORDER_WRONG_INGREDIENTS = "One or more ids provided are incorrect"
+RESPONSE_GET_ORDERS_NO_AUTH = "You should be authorised"
 
-name = "test1"
-password = "1test"
-email = "magnusequus@yandex.ru"
+NAME = "test1"
+PASSWORD = "1test"
+EMAIL = "magnusequus@yandex.ru"
 
-burger_ingredients = ["61c0c5a71d1f82001bdaaa6f", "61c0c5a71d1f82001bdaaa70"]
-burger_wrong_ingredients = ["11c0c5a71d1f82001bdaaa6f", "12c0c5a71d1f82001bdaaa70"]
-burger_name = "Бессмертный метеоритный бургер"
+BURGER_INGREDIENTS = ["61c0c5a71d1f82001bdaaa6f", "61c0c5a71d1f82001bdaaa70"]
+BURGER_WRONG_INGREDIENTS = ["11c0c5a71d1f82001bdaaa6f", "12c0c5a71d1f82001bdaaa70"]
+BURGER_NAME = "Бессмертный метеоритный бургер"
